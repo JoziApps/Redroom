@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.upload-section {
+    margin-bottom: 20px;
+}
+
+.preview-section, .filters-section, .export-section {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+img, video {
+    max-width: 100%;
+    margin: 10px 0;
+}
+
+input[type="file"] {
+    margin: 10px;
+}
