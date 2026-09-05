@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedRoom Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- gif.js library for GIF export -->
+    <script src="https://cdn.jsdelivr.net/npm/gif.js@0.2.0/dist/gif.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gif.js@0.2.0/dist/gif.worker.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>RedRoom Editor</h1>
+
+        <!-- Upload Area -->
+        <div class="upload-section">
+            <h3>Upload Images (Max 10) | Upload Videos (Max 1)</h3>
+            <input type="file" id="imageInput" accept="image/*" multiple>
+            <input type="file" id="videoInput" accept="video/*">
+        </div>
+
+        <!-- Preview Area -->
+        <div class="preview-section">
+            <canvas id="canvas" width="500" height="500" style="display:none;"></canvas>
+            <video id="videoPreview" controls style="display:none; max-width: 100%;"></video>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters-section" id="filterBar" style="display: none;">
+            <h3>Preset Filters</h3>
+            <button onclick="applyFilter('none')">Original</button>
+            <button onclick="applyFilter('grayscale(100%)')">B&W</button>
+            <button onclick="applyFilter('sepia(100%)')">Vintage</button>
+            <button onclick="applyFilter('saturate(3)')">Vivid</button>
+            <button onclick="applyFilter('hue-rotate(90deg)')">Cool</button>
+            <button onclick="applyFilter('contrast(1.5) brightness(1.1)')">Pop</button>
+        </div>
+
+        <!-- Export -->
+        <div class="export-section" id="exportBar" style="display: none;">
+            <button onclick="exportImage()">Download as mobile.jpg</button>
+            <button onclick="exportGif()">Export Video as GIF (tablet.jpg)</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
